@@ -20,6 +20,10 @@ android {
     }
 }
 
+kapt {
+    generateStubs = true
+}
+
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
@@ -27,8 +31,24 @@ dependencies {
     })
     compile 'com.android.support:appcompat-v7:25.3.1'
     compile 'com.android.support.constraint:constraint-layout:1.0.2'
-    testCompile 'junit:junit:4.12'
     compile "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
+
+    //Room
+    compile "android.arch.persistence.room:runtime:1.0.0-alpha1"
+    kapt "android.arch.persistence.room:compiler:1.0.0-alpha1"
+    testCompile "android.arch.persistence.room:testing:1.0.0-alpha1"
+    compile "android.arch.persistence.room:rxjava2:1.0.0-alpha1"
+
+    //RxJava2
+    compile 'io.reactivex.rxjava2:rxandroid:2.0.1'
+    compile 'io.reactivex.rxjava2:rxjava:2.1.0'
+
+    //Dagger 2
+    compile 'com.google.dagger:dagger:2.11'
+    kapt 'com.google.dagger:dagger-compiler:2.11'
+
+    //Testing
+    testCompile 'junit:junit:4.12'
 }
 repositories {
     mavenCentral()

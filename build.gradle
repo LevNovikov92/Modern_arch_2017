@@ -17,9 +17,21 @@ buildscript {
 allprojects {
     repositories {
         jcenter()
+        maven { url 'https://maven.google.com' }
     }
 }
 
 task clean(type: Delete) {
     delete rootProject.buildDir
+}
+
+subprojects {
+    configurations.all {
+        resolutionStrategy {
+            forcedModules = [
+                    "org.jetbrains.kotlin:kotlin-stdlib:1.1.2",
+                    "org.jetbrains.kotlin:kotlin-reflect:1.1.2"
+            ]
+        }
+    }
 }
