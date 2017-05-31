@@ -11,5 +11,5 @@ import com.lev.modern_arch_2017.data.localDataSource.entity.TaskEntity
  */
 @Database(entities = arrayOf(TaskEntity::class), version = 1)
 abstract class DataBase : RoomDatabase() {
-    abstract fun TaskDao(): TaskDao
+    abstract fun taskDao(): TaskDao
 }

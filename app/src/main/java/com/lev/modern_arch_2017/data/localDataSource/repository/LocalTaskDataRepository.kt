@@ -12,6 +12,6 @@ import javax.inject.Inject
 class LocalTaskDataRepository @Inject constructor(val dataBase: DataBase) : TaskDataRepository {
 
     override fun findAll(): Flowable<List<TaskEntity>> {
-        return dataBase.TaskDao().findAll()
+        return dataBase.taskDao().findAll()
     }
 }
