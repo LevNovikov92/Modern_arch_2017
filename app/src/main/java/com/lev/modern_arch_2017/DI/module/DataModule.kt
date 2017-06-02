@@ -1,4 +1,4 @@
-package com.lev.modern_arch_2017.DI
+package com.lev.modern_arch_2017.DI.module
 
 import android.arch.persistence.room.Room
 import android.content.Context
@@ -13,16 +13,10 @@ import javax.inject.Singleton
 
 /**
  * Author: Lev
- * Date: 27.05.2017
+ * Date: 02.06.2017
  */
 @Module
-class AppModule(private val context: Context) {
-
-    @Provides
-    @Singleton
-    fun provideContext(): Context {
-        return context
-    }
+class DataModule {
 
     @Provides
     @Singleton

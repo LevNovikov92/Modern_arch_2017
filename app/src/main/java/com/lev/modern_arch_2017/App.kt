@@ -1,9 +1,9 @@
 package com.lev.modern_arch_2017
 
 import android.app.Application
-import com.lev.modern_arch_2017.DI.AppComponent
-import com.lev.modern_arch_2017.DI.AppModule
-import com.lev.modern_arch_2017.DI.DaggerAppComponent
+import com.lev.modern_arch_2017.DI.component.AppComponent
+import com.lev.modern_arch_2017.DI.component.DaggerAppComponent
+import com.lev.modern_arch_2017.DI.module.AppModule
 
 /**
  * Author: Lev
